@@ -3,6 +3,16 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('/side.jks')
+            storePassword '123456'
+            keyAlias 'side'
+            keyPassword '123456'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
     compileSdk 30
 
     defaultConfig {
@@ -20,6 +30,7 @@ android {
                 JPUSH_APPKEY : "0936a4daf5f16dfaf14910c3", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
+        signingConfig signingConfigs.release
     }
 
     //craniatech@163.com
