@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--输入框选中状态-->
+    <style name="EditText" parent="Theme.AppCompat.Light">
+        <!--输入框未选中颜色-->
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <!--输入框选择颜色-->
+        <item name="colorControlActivated">@color/color_4683F7</item>
+    </style>
+
+    <!--输入框选中状态-->
+    <style name="EditText2" parent="Theme.AppCompat.Light">
+        <!--输入框未选中颜色-->
+        <item name="colorControlNormal">@android:color/white</item>
+        <!--输入框选择颜色-->
+        <item name="colorControlActivated">@color/color_4683F7</item>
+    </style>
+
+    <!--相册属性-->
+    <style name="Matisse.Dracula" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/color_4683F7</item>
+        <item name="colorPrimaryDark">@color/color_4683F7</item>
+        <item name="toolbar">@style/Toolbar.Dracula</item>
+        <item name="album.dropdown.title.color">@color/dracula_album_dropdown_title_text</item>
+        <item name="album.dropdown.count.color">@color/dracula_album_dropdown_count_text</item>
+        <item name="album.element.color">@android:color/white</item>
+        <item name="album.thumbnail.placeholder">@color/dracula_album_dropdown_thumbnail_placeholder</item>
+        <item name="album.emptyView">@drawable/ic_empty_dracula</item>
+        <item name="album.emptyView.textColor">@color/dracula_album_empty_view</item>
+        <item name="item.placeholder">@color/dracula_item_placeholder</item>
+        <item name="item.checkCircle.backgroundColor">@color/color_4683F7</item>
+        <item name="item.checkCircle.borderColor">@color/dracula_item_checkCircle_borderColor</item>
+        <item name="page.bg">@color/color_4683F7</item>
+        <item name="bottomToolbar.bg">@color/color_4683F7</item>
+        <item name="bottomToolbar.preview.textColor">@color/white</item>
+        <item name="bottomToolbar.apply.textColor">@color/dracula_preview_bottom_toolbar_apply</item>
+        <item name="preview.bottomToolbar.back.textColor">@color/dracula_preview_bottom_toolbar_back_text</item>
+        <item name="preview.bottomToolbar.apply.textColor">@color/dracula_preview_bottom_toolbar_apply</item>
+        <item name="android:listPopupWindowStyle">@style/Popup.Dracula</item>
+        <item name="listPopupWindowStyle">@style/Popup.Dracula</item>
+        <item name="capture.textColor">@color/dracula_capture</item>
+    </style>
+
+    <!--滑动指示器 属性配置-->
+    <style name="DynamicPagerIndicatorStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <!--选中状态文字字体加粗-->
+        <item name="isTabSelectedTextBold">true</item>
+        <!--正常状态文字大小-->
+        <item name="tabNormalTextSize">18sp</item>
+        <!--选中状态文字大小-->
+        <item name="tabSelectedTextSize">22sp</item>
+        <!--正常状态文字颜色-->
+        <item name="tabNormalTextColor">@color/color_979797</item>
+        <!--选中状态文字颜色-->
+        <item name="tabSelectedTextColor">@color/white</item>
+        <!--导航条的高度-->
+        <item name="indicatorLineHeight">3dp</item>
+        <!--导航条的宽度-->
+        <item name="indicatorLineWidth">28dp</item>
+        <!--导航条的圆角-->
+        <item name="indicatorLineRadius">3dp</item>
+        <!--导航条渐变的开始颜色-->
+        <item name="indicatorLineStartColor">@color/white</item>
+        <!--导航条渐变的结束颜色-->
+        <item name="indicatorLineEndColor">@color/white</item>
+        <!--导航条的上边距-->
+        <item name="indicatorLineMarginTop">4dp</item>
+        <!--导航条的下边距-->
+        <item name="indicatorLineMarginBottom">4dp</item>
+        <!--导航条的滚动模式
+        1、dynamic：即爱奇艺/腾讯视频那种可变化长度的效果。导航条长度、位置均变化。
+        2、transform：普通移动效果，导航条长度不变，位置变化。-->
+        <item name="indicatorLineScrollMode">dynamic</item>
+        <!--指示器的显示模式
+        1、scrollable：适用于ViewPager的count较多时。可滑动。默认从左向右排列显示
+        2、scrollable_center：居中显示，适用于ViewPager的count较少时，且需要居中显示
+        3、fixed：均分模式，该模式下会平均分配TabView的宽度-->
+        <item name="pagerIndicatorMode">scrollable_center</item>
+    </style>
+
+    <!-- 版本升级弹窗属性设置 -->
+    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+</resources>

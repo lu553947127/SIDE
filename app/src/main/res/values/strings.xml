@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">SIDE</string>
+
+    <!--公共-->
+    <string name="home">玩客</string>
+    <string name="meet">遇见</string>
+    <string name="message">消息</string>
+    <string name="mine">我的</string>
+
+    <string name="loading">正在努力加载哦～</string>
+    <string name="start_title">让数字世界更真实</string>
+    <string name="net_error">没有网络，点击重试</string>
+    <string name="net_not">请检查是否联网</string>
+
+    <string name="reminder">温馨提示！</string>
+    <string name="permission_photo_storage">为了更好的为您服务，请您打开您的相机和存储权限!</string>
+    <string name="permission_location">为了更好的为您服务，请您打开您的定位权限!</string>
+    <string name="permission_notice">为了更好的为您服务，请您打开您的通知权限!</string>
+    <string name="photo_size_not">图片数量超过限制，最多上传6张图片哦～</string>
+    <string name="photo_size_not_4">图片数量超过限制，最多上传4张图片哦～</string>
+    <string name="photo_size_not_9">图片数量超过限制，最多上传9张图片哦～</string>
+    <string name="empty">暂无</string>
+    <string name="login_out_is">确定要退出登录吗？</string>
+    <string name="sign_out">退出登录成功</string>
+
+    <string name="start_tips">世界这么大，去对面看看</string>
+
+    <string name="login">登录/注册</string>
+    <string name="login_tips">未注册过的手机号将自动创建账号</string>
+    <string name="login_password_title">欢迎回来，%1$s</string>
+    <string name="login_password_tip">输入密码后，开始玩客！</string>
+    <string name="login_password_hint">输入密码</string>
+    <string name="login_password_forget">忘记密码？</string>
+    <string name="get_wanke">进入玩客 >>></string>
+    <string name="login_success">登录成功</string>
+
+    <string name="register">注册</string>
+    <string name="register_tips">已发送验证码</string>
+    <string name="resend">重新发送</string>
+    <string name="second">(%1$s)</string>
+    <string name="verification">验证</string>
+
+    <string name="set_password_tip">设置密码</string>
+    <string name="rebuild_password">重设密码</string>
+    <string name="set_password">请设置您的密码</string>
+    <string name="hint_password">输入密码（至少8个字符）</string>
+    <string name="confirm_password">确认密码</string>
+
+    <string name="first_sex">Hi,你的性别是？</string>
+    <string name="first_sex_tips">我们会根据你的性别推荐附近的异性</string>
+    <string name="first_sex_male">男生</string>
+    <string name="first_sex_female">女生</string>
+    <string name="first_birthday">你什么时候出生的呢？</string>
+    <string name="first_birthday_tips">听说出生日期也决定了组局喜好喔</string>
+    <string name="first_birthday_year">YYYY</string>
+    <string name="first_birthday_month">MM</string>
+    <string name="first_birthday_day">DD</string>
+    <string name="first_birthday_not">日期格式输入不正确</string>
+    <string name="first_job">你现在的状态是？</string>
+    <string name="first_job_tps">你的状态是？</string>
+    <string name="first_job_student">学生</string>
+    <string name="first_job_work">工作</string>
+    <string name="first_job_free">自由职业者</string>
+    <string name="first_expect">遇见玩趣相投的Ta</string>
+    <string name="first_expect_tips">你的期待是？</string>
+    <string name="first_activity_tips">最希望参加什么活动？</string>
+    <string name="first_user">想知道你的名字和照片？</string>
+    <string name="first_user_tips">有些人,一旦遇见,便一眼万年</string>
+    <string name="first_user_hint">填写名字（15个字符以内）</string>
+    <string name="first_permission">最后帮忙开个权限吧</string>
+    <string name="first_play">我今天想玩</string>
+    <string name="first_play_tips">*选择后将可以闪约附近和你有相同意向的朋友</string>
+    <string name="first_play_restaurant">我想吃的餐厅是</string>
+    <string name="first_play_hint">请输入</string>
+
+    <string name="home_title">最新发布</string>
+    <string name="home_empty">附近暂时没有更多活动哦</string>
+    <string name="home_release">最新发布</string>
+    <string name="home_start">最快开始</string>
+    <string name="home_distance">最快距离</string>
+
+    <string name="meet_my_matching">我的匹配：</string>
+    <string name="meet_challenge_on">去设置默契挑战</string>
+    <string name="meet_challenge_off">默契挑战已开启</string>
+
+    <string name="agreement_content">欢迎使用「SIDE对面」App！SIDE对面App的产品及服务由上海脑壳网络科技有限公司为您提供。在您使用SIDE对面App之前，我们想向您说明SIDE对面App的服务协议及隐私政策内容，请您仔细阅读并作出适当的选择：
+\n1、《SIDE对面App软件许可及服务协议》（请点击并阅读）的主要内容包括：
+协议适用范围、服务内容及形式、软件使用及许可、终端责任安全、用户权利与义务、用户行为规范、知识产权声明、用户信息保护等。
+\n2、关于《SIDE对面App隐私政策》（请点击并阅读），我们特别向您说明：
+\n(1)根据合法、正当、必要的原则，我们会收集实现产品功能所必要的信息，包括：您在注册账户时所填写的信息（昵称、手机号码等）；当您选择使用部分服务时，我们将在征求您的同意后获取相关提供服务所需的信息，如当您使用与位置有关的服务时，我们可能会获取您设备所在的位置信息.\n(2)SIDE对面App运营方设有严格的数据保护及管理措施，我们会采取安全保障措施努力保护您的个人信息不丢失，不被未经授权地访问、使用、披露、修改或损坏以及其它形式的非法处理。
+\n(3)您可以在应用内或您的设备中查询、更正、删除您的信息并对相关授权进行管理。
+\n(4)我们的产品集成友盟+SDK，友盟+SDK需要收集您的设备Mac地址、唯一设备识别码（IMEI/android ID/IDFA/OPENUDID/IP地址/GUID、SIM 卡 IMSI 信息）以提供统计分析服务，并通过地理位置校准报表数据准确性，提供基础反作弊能力。
+如您对本公告及相关协议的相关内容有任何意见、建议或疑问，您可以通过contact@wankrfun.com 联系我们。</string>
+
+    <string-array name="meet_list">
+        <item>遇见</item>
+        <item>谁喜欢我</item>
+    </string-array>
+
+    <string-array name="messages_list">
+        <item>消息</item>
+        <item>通知</item>
+    </string-array>
+
+</resources>

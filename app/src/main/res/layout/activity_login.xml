@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_start_logo"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:text="@string/login"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="@color/color_979797"
+            android:text="@string/login_tips"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/ccp_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:ccp_textColor="@color/black"
+                app:ccp_customMasterCountries="AU,CA,CN,FR,DE,HK,JP,KR,PL,ES,TW,GB,US"/>
+
+            <com.crania.side.widget.CustomEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:theme="@style/EditText"
+                android:inputType="number"
+                android:textColorHint="@color/color_EEEEEE"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:textColor="@drawable/selector_login"
+        android:textSize="18sp"
+        android:text="下一步"/>
+
+</RelativeLayout>

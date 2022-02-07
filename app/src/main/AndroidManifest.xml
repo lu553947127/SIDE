@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.crania.side">
+
+    <!--允许程序打开网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序写入内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+    <!--允许程序读取内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--允许程序获取手机状态（包括手机号码、IMEI、IMSI权限等）-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--允许程序打开相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--用于提高GPS定位速度-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_start_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_start_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SIDE"
+        android:networkSecurityConfig="@xml/network_config"
+        android:requestLegacyExternalStorage="true"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="true">
+
+        <!-- 启动页 -->
+        <activity
+            android:name=".view.start.StartUpActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 首页(属性设置：软键盘默认自动不弹起) -->
+        <activity android:name=".view.MainActivity" android:windowSoftInputMode = "stateAlwaysHidden|adjustPan"/>
+
+        <!-- 登录页（属性设置：页面打开唯一性/设置底部控件view随着软键盘的弹出而上移） -->
+        <activity android:name=".view.login.LoginActivity" android:launchMode="singleTask"  android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!-- h5加载页 -->
+        <activity android:name=".view.common.WebViewActivity"/>
+
+        <!--Android7.0后临时访问权限-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.crania.side.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path">
+
+            </meta-data>
+        </provider>
+
+        <!--高德地图appKey-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="44005ef8d4b4afe3ad1c1cf2f61a846e" />
+
+        <!--极光推送 start-->
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service
+            android:name=".receiver.jspush.JpushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".receiver.jspush.MessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.wankrfun.crania" />
+            </intent-filter>
+        </receiver>
+        <!--极光推送 end-->
+
+    </application>
+
+</manifest>

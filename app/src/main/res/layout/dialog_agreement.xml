@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/shape_white_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/color_202020"
+                android:textSize="20sp"
+                android:text="欢迎来SIDE"/>
+
+            <com.crania.side.widget.ElasticScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarThumbVertical="@color/color_202020"
+                android:layout_margin="25dp">
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:lineSpacingMultiplier="1.1"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/color_666666"
+                    android:textSize="14sp"
+                    android:text="@string/agreement_content"/>
+
+            </com.crania.side.widget.ElasticScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_agree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_black_8"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="我已阅读并同意"/>
+
+            <TextView
+                android:id="@+id/tv_disagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:textColor="@color/color_333333"
+                android:textSize="13sp"
+                android:text="不同意"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
