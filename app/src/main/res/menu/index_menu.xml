@@ -2,22 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_home"
-        android:icon="@drawable/icon_start_logo"
+        android:icon="@drawable/selector_menu_home"
         android:title="@string/home" />
     <item
         android:id="@+id/menu_find"
-        android:icon="@drawable/icon_start_logo"
+        android:icon="@drawable/selector_menu_find"
         android:title="@string/find" />
     <item
         android:id="@+id/menu_add"
-        android:icon="@drawable/icon_start_logo"
         android:title="@string/add" />
     <item
         android:id="@+id/menu_message"
-        android:icon="@drawable/icon_start_logo"
+        android:icon="@drawable/selector_menu_message"
         android:title="@string/message" />
     <item
         android:id="@+id/menu_mine"
-        android:icon="@drawable/icon_start_logo"
+        android:icon="@drawable/selector_menu_mine"
         android:title="@string/mine" />
 </menu>

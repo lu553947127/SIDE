@@ -144,4 +144,6 @@ dependencies {
     implementation 'com.github.penfeizhou.android.animation:awebp:2.10.0'
     //支持角标多功能tab
     implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+    //角标工具
+    implementation 'q.rorbin:badgeview:1.1.3'
 }

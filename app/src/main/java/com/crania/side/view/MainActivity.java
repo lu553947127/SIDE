@@ -13,6 +13,7 @@ import com.blankj.utilcode.util.TimeUtils;
 import com.crania.side.R;
 import com.crania.side.base.BaseActivity;
 import com.crania.side.base.SpConfig;
+import com.crania.side.utils.BadgeUtils;
 import com.crania.side.utils.NotificationsUtils;
 import com.crania.side.utils.NumberUtils;
 import com.crania.side.view.common.WebViewActivity;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * @ProjectName: SIDE
@@ -60,17 +62,10 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initDataAndEvent(Bundle savedInstanceState) {
         initFragment();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (!NotificationsUtils.isNotificationEnabled(this)) {
-            //通知权限开启弹窗 3天只弹出一次
-            if (NumberUtils.dateDiff(SPUtils.getInstance().getString(SpConfig.NOTICE_TIME), TimeUtils.getNowString(), "yyyy-MM-dd hh:mm:ss") >= 3) {
-                showNoticePermissionDialog(getString(R.string.permission_notice));
-            }
-        }
+        //设置角标
+        BadgeUtils.addBadgeAt(activity, navigation, 3, 111);
+        //设置底部tab icon大小
+        BadgeUtils.adjustNavigationIcoSize(activity, navigation);
     }
 
     /**
@@ -80,7 +75,6 @@ public class MainActivity extends BaseActivity {
         mFragments = new ArrayList<>();
         mFragments.add(new HomeFragment());
         mFragments.add(new FindFragment());
-        mFragments.add(null);
         mFragments.add(new MessagesFragment());
         mFragments.add(new MineFragment());
 
@@ -96,15 +90,12 @@ public class MainActivity extends BaseActivity {
                     if(lastFragment!=1)switchFragment(lastFragment,1);lastFragment=1;
                     break;
                 case R.id.menu_add:
-                    Bundle bundle = new Bundle();
-                    bundle.putString("type", "user");
-                    ActivityUtils.startActivity(bundle, WebViewActivity.class);
                     break;
                 case R.id.menu_message:
-                    if(lastFragment!=3)switchFragment(lastFragment,3);lastFragment=3;
+                    if(lastFragment!=2)switchFragment(lastFragment,2);lastFragment=2;
                     break;
                 case R.id.menu_mine:
-                    if(lastFragment!=4)switchFragment(lastFragment,4);lastFragment=4;
+                    if(lastFragment!=3)switchFragment(lastFragment,3);lastFragment=3;
                     break;
                 default:
                     break;
@@ -127,6 +118,24 @@ public class MainActivity extends BaseActivity {
             transaction.add(R.id.fragment,mFragments.get(index));
         }
         transaction.show(mFragments.get(index)).commitAllowingStateLoss();
+    }
+
+    @OnClick({R.id.iv_add})
+    void onClick() {
+        Bundle bundle = new Bundle();
+        bundle.putString("type", "user");
+        ActivityUtils.startActivity(bundle, WebViewActivity.class);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (!NotificationsUtils.isNotificationEnabled(this)) {
+            //通知权限开启弹窗 3天只弹出一次
+            if (NumberUtils.dateDiff(SPUtils.getInstance().getString(SpConfig.NOTICE_TIME), TimeUtils.getNowString(), "yyyy-MM-dd hh:mm:ss") >= 3) {
+                showNoticePermissionDialog(getString(R.string.permission_notice));
+            }
+        }
     }
 
     /**
