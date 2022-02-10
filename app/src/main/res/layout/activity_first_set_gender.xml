@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_bar_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:text="@string/first_sex"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="@color/color_999999"
+            android:text="@string/first_sex_tips"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_female"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circular_gray">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_female"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_sex_female"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_male"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circular_gray">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_male"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_sex_male"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

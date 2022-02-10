@@ -78,6 +78,7 @@ public class MainActivity extends BaseActivity {
         mFragments.add(new MessagesFragment());
         mFragments.add(new MineFragment());
 
+        navigation.setItemIconTintList(null);
         switchFragment(lastFragment,0);lastFragment=0;
         navigation.getMenu().getItem(0).setChecked(true);
         //判断选择的菜单

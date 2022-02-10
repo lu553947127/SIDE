@@ -2,17 +2,18 @@ package com.crania.side.view.login;
 
 import android.os.Bundle;
 import android.text.Editable;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
 import com.blankj.utilcode.util.ActivityUtils;
+import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.crania.side.R;
 import com.crania.side.base.BaseActivity;
+import com.crania.side.base.SpConfig;
 import com.crania.side.utils.NumberUtils;
-import com.crania.side.view.MainActivity;
-import com.crania.side.viewmodel.LoginViewModel;
 import com.crania.side.widget.CustomEditText;
 import com.rilixtech.widget.countrycodepicker.CountryCodePicker;
 
@@ -33,17 +34,23 @@ import butterknife.OnTextChanged;
  * @Version: 1.0
  */
 public class LoginActivity extends BaseActivity {
+    @BindView(R.id.ll_bg)
+    LinearLayout llBg;
     @BindView(R.id.ccp_country)
     CountryCodePicker countryCodePicker;
     @BindView(R.id.et_phone)
     CustomEditText etPhone;
     @BindView(R.id.tv_login)
     AppCompatTextView tvLogin;
-    private LoginViewModel loginViewModel;
     //世界各国区号code
     private String code = "+86";
     //各个国家简称
     private String abbreviation = "cn";
+
+    @Override
+    public boolean isSupportSwipeBack() {
+        return false;
+    }
 
     @Override
     protected int initLayoutRes() {
@@ -65,24 +72,14 @@ public class LoginActivity extends BaseActivity {
             code = "+" + selectedCountry.getPhoneCode();
         });
 
-        loginViewModel = getViewModel(LoginViewModel.class);
+        etPhone.setHint("请输入你的手机号");
 
-        //验证手机号返回结果
-        loginViewModel.verificationPhoneLiveData.observe(this, object -> {
-            Bundle bundle = new Bundle();
-            //老用户
-            if (object.getParseObject() != null){
-                bundle.putString("abbreviation", abbreviation);
-                bundle.putString("phone", object.getParseObject().getString("phonenumber"));
-//                ActivityUtils.startActivity(bundle, LoginPasswordActivity.class);
-            }else {
-                //新用户
-                if (object.getMessage().equals("Invalid session token")){
-                    ToastUtils.showShort(object.getMessage());
-                    return;
-                }
-                bundle.putString("phone", code + etPhone.getTrimmedString());
-//                ActivityUtils.startActivity(bundle, VerificationCodeActivity.class);
+        //手机号输入框点击选择/未选中效果
+        etPhone.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                llBg.setBackgroundResource(R.drawable.shape_black_half_2);
+            } else {
+                llBg.setBackgroundResource(R.drawable.shape_gray_half_2);
             }
         });
     }
@@ -91,14 +88,18 @@ public class LoginActivity extends BaseActivity {
     void inputPhoneNumber(Editable editable) {
         String phoneNumber = editable.toString().trim();
         tvLogin.setEnabled(NumberUtils.isPhoneNumberValid(activity,code + phoneNumber, code));
-        if (NumberUtils.isPhoneNumberValid(activity,code + phoneNumber, code) || StringUtils.isEmpty(phoneNumber)){
-
-        }
     }
 
     @OnClick({R.id.tv_login})
     void onClick() {
-//        loginViewModel.getVerificationPhone(code + etPhone.getTrimmedString());
-        ActivityUtils.startActivity(MainActivity.class);
+        if (!NumberUtils.isPhoneNumberValid(activity,code + etPhone.getTrimmedString(), code) ||
+                StringUtils.isEmpty(etPhone.getTrimmedString())){
+            ToastUtils.showShort(getString(R.string.login_phone_not));
+            return;
+        }
+
+        SPUtils.getInstance().put(SpConfig.ABBREVIATION, abbreviation, true);
+        SPUtils.getInstance().put(SpConfig.PHONE, code + etPhone.getTrimmedString(), true);
+        ActivityUtils.startActivity(VerificationCodeActivity.class);
     }
 }

@@ -28,6 +28,7 @@
 
     <string name="login">登录/注册</string>
     <string name="login_tips">未注册过的手机号将自动创建账号</string>
+    <string name="login_phone_not">手机号输入格式有误</string>
     <string name="login_password_title">欢迎回来，%1$s</string>
     <string name="login_password_tip">输入密码后，开始玩客！</string>
     <string name="login_password_hint">输入密码</string>
@@ -35,10 +36,10 @@
     <string name="get_wanke">进入玩客 >>></string>
     <string name="login_success">登录成功</string>
 
-    <string name="register">注册</string>
-    <string name="register_tips">已发送验证码</string>
+    <string name="register">你收到的验证码是</string>
+    <string name="register_tips">验证码已发送至%1$s</string>
     <string name="resend">重新发送</string>
-    <string name="second">(%1$s)</string>
+    <string name="second">倒计时(%1$s)s</string>
     <string name="verification">验证</string>
 
     <string name="set_password_tip">设置密码</string>
@@ -47,18 +48,18 @@
     <string name="hint_password">输入密码（至少8个字符）</string>
     <string name="confirm_password">确认密码</string>
 
-    <string name="first_sex">Hi,你的性别是？</string>
-    <string name="first_sex_tips">我们会根据你的性别推荐附近的异性</string>
+    <string name="first_sex">你的性别是</string>
+    <string name="first_sex_tips">我们会根据你的性别为你推荐朋友</string>
     <string name="first_sex_male">男生</string>
     <string name="first_sex_female">女生</string>
-    <string name="first_birthday">你什么时候出生的呢？</string>
-    <string name="first_birthday_tips">听说出生日期也决定了组局喜好喔</string>
+    <string name="first_birthday">你的出生年月是</string>
+    <string name="first_birthday_tips">听说出生也决定了组局喜好日期</string>
     <string name="first_birthday_year">YYYY</string>
     <string name="first_birthday_month">MM</string>
     <string name="first_birthday_day">DD</string>
     <string name="first_birthday_not">日期格式输入不正确</string>
-    <string name="first_job">你现在的状态是？</string>
-    <string name="first_job_tps">你的状态是？</string>
+    <string name="first_job">创建SIDE居民身份</string>
+    <string name="first_job_tps">请使用本人真实照片，最多可选择9张</string>
     <string name="first_job_student">学生</string>
     <string name="first_job_work">工作</string>
     <string name="first_job_free">自由职业者</string>

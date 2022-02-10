@@ -45,7 +45,7 @@ public class LoginViewModel extends ViewModel {
     public MutableLiveData<ParseEvent> verificationPhoneLiveData;
     public MutableLiveData<ParseEvent> sendCodeLiveData;
     public MutableLiveData<Long> timeLiveDataLiveData;
-    public MutableLiveData<ParseEvent> verificationCodeLiveData;
+    public MutableLiveData<SendCodeBean> verificationCodeLiveData;
     public MutableLiveData<ParseEvent> resetPasswordLiveData;
     public MutableLiveData<ParseUser> loginLiveData;
     public MutableLiveData<VersionUploadBean> versionUploadLiveData;
@@ -126,13 +126,8 @@ public class LoginViewModel extends ViewModel {
                 if (e == null) {
                     LogUtils.e("getVerificationCode: "+ new Gson().toJson(object));
                     SendCodeBean baseEvent = new Gson().fromJson(new Gson().toJson(object), SendCodeBean.class);
-                    if (baseEvent.getCode() == 0){
-                        verificationCodeLiveData.postValue(new ParseEvent(object));
-                    }else {
-                        ToastUtils.showShort(baseEvent.getData().getMsg());
-                    }
+                    verificationCodeLiveData.postValue(baseEvent);
                 }else {
-                    verificationCodeLiveData.postValue(new ParseEvent(e.getMessage()));
                     LogUtils.e( "getVerificationCode: " + e.getMessage());
                 }
             }

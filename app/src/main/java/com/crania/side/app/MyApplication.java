@@ -131,11 +131,11 @@ public class MyApplication extends Application {
      */
     private static void initUtils(Application context) {
         Utils.init(context);
-        LogUtils.getConfig().setGlobalTag(context.getString(R.string.app_name)).setLogSwitch(false);
+        LogUtils.getConfig().setGlobalTag(context.getString(R.string.app_name)).setLogSwitch(true);
         ToastUtils.setGravity(Gravity.CENTER, 0, ConvertUtils.dp2px(100));
         ToastUtils.setMsgTextSize(13);
         ToastUtils.setMsgColor(context.getResources().getColor(R.color.white));
-//        ToastUtils.setBgResource(context.getResources().getColor(R.color.black));
+        ToastUtils.setBgResource(R.drawable.shape_bg_toast);
     }
 
     /**

@@ -1,5 +1,7 @@
 package com.crania.side.bean;
 
+import java.io.Serializable;
+
 /**
  * @ProjectName: SIDE
  * @Package: com.crania.side.bean
@@ -15,7 +17,7 @@ package com.crania.side.bean;
 public class SendCodeBean {
     /**
      * code : 0
-     * data : {"msg":"验证码错误","status":false}
+     * data : {"msg":"校验验证码成功","tempPass":"Lu123456","status":true}
      * error :
      */
 
@@ -47,13 +49,15 @@ public class SendCodeBean {
         this.error = error;
     }
 
-    public static class DataBean {
+    public static class DataBean implements Serializable {
         /**
-         * msg : 验证码错误
-         * status : false
+         * msg : 校验验证码成功
+         * tempPass : Lu123456
+         * status : true
          */
 
         private String msg;
+        private String tempPass;
         private boolean status;
 
         public String getMsg() {
@@ -62,6 +66,14 @@ public class SendCodeBean {
 
         public void setMsg(String msg) {
             this.msg = msg;
+        }
+
+        public String getTempPass() {
+            return tempPass;
+        }
+
+        public void setTempPass(String tempPass) {
+            this.tempPass = tempPass;
         }
 
         public boolean isStatus() {

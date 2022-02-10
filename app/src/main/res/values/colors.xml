@@ -5,6 +5,7 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="colorPrimary">#4683F7</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
@@ -12,7 +13,11 @@
     <color name="color_979797">#979797</color>
     <color name="color_202020">#202020</color>
     <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
     <color name="color_333333">#333333</color>
     <color name="color_CDCDCD">#CDCDCD</color>
     <color name="color_EEEEEE">#EEEEEE</color>
+    <color name="color_D7D7D7">#D7D7D7</color>
+    <color name="color_DC6560">#DC6560</color>
+    <color name="color_FAFBFC">#FAFBFC</color>
 </resources>

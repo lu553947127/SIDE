@@ -9,6 +9,7 @@ import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.crania.side.base.BaseActivity;
 import com.crania.side.base.SpConfig;
+import com.crania.side.view.login.LoginActivity;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
 
@@ -113,8 +114,8 @@ public class LoginUtils {
      */
     public static void getExitLogin() {
         SPUtils.getInstance().clear(true);
-//        ActivityUtils.startActivity(LoginActivity.class);
-//        ActivityUtils.finishOtherActivities(LoginActivity.class);
+        ActivityUtils.startActivity(LoginActivity.class);
+        ActivityUtils.finishOtherActivities(LoginActivity.class);
 //        RongIM.getInstance().logout();
     }
 

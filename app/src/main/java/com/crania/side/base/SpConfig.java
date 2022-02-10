@@ -34,6 +34,9 @@ public class SpConfig {
     /*邀请码*/
     public static final String INVITE = "invite";
 
+    /*国家代码*/
+    public static final String ABBREVIATION = "abbreviation";
+
     /*账号*/
     public static final String PHONE = "phone";
 

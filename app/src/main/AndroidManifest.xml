@@ -55,6 +55,18 @@
         <!-- 登录页（属性设置：页面打开唯一性/设置底部控件view随着软键盘的弹出而上移） -->
         <activity android:name=".view.login.LoginActivity" android:launchMode="singleTask"  android:windowSoftInputMode="stateVisible|adjustResize" />
 
+        <!-- 获取验证码页 -->
+        <activity android:name=".view.login.VerificationCodeActivity"/>
+
+        <!-- 设置性别页面 -->
+        <activity android:name=".view.login.first.FirstSetGenderActivity"/>
+
+        <!-- 设置出生日期页面 -->
+        <activity android:name=".view.login.first.FirstSetBirthdayActivity" android:windowSoftInputMode="stateVisible|adjustResize"/>
+
+        <!-- 设置性别页面 -->
+        <activity android:name=".view.login.first.FirstSetAvatarActivity"/>
+
         <!-- h5加载页 -->
         <activity android:name=".view.common.WebViewActivity"/>
 
