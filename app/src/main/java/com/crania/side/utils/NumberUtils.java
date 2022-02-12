@@ -1,5 +1,7 @@
 package com.crania.side.utils;
 
+import android.text.TextUtils;
+
 import com.amap.api.maps.AMapUtils;
 import com.amap.api.maps.model.LatLng;
 import com.crania.side.base.BaseActivity;
@@ -13,6 +15,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import io.michaelrocks.libphonenumber.android.NumberParseException;
 import io.michaelrocks.libphonenumber.android.PhoneNumberUtil;
@@ -50,6 +54,21 @@ public class NumberUtils {
 //            LogUtils.e("isPhoneNumberValid NumberParseException was thrown: " + e.toString());
         }
         return false;
+    }
+
+    /**
+     * 判断输入字符串是否是非法字符
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isIllegalCharacter(String str) {
+//        String telRegex = "[`~!@#-_$%^&*()+=|{}':;',\\[\\]<>/?~！@#￥%……&*（）——+|{}【】《》 ‘；：”“’。，、？]";
+        String telRegex = "[~!/@#$%^&*()\\-_=+\\|[{}];:\'\",<.>/?]+";
+        Matcher m = null;
+        Pattern p = Pattern.compile(telRegex);
+        m = p.matcher(str);
+        return m.find();
     }
 
     public static final String[] constellationArray = { "水瓶座", "双鱼座", "牡羊座",

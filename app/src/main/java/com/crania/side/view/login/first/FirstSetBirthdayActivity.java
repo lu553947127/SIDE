@@ -154,7 +154,7 @@ public class FirstSetBirthdayActivity extends BaseActivity {
             case R.id.iv_bar_back:
                 finish();
                 break;
-            case R.id.tv_next://重新发送验证码
+            case R.id.tv_next:
                 ActivityUtils.startActivity(FirstSetAvatarActivity.class);
                 break;
         }

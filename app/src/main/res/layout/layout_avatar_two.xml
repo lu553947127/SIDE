@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_two"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="@string/first_job"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:textColor="@color/color_999999"
+            android:text="@string/first_job_tps"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginTop="24dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="228dp"
+               android:orientation="horizontal">
+
+               <RelativeLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="2">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="centerCrop"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_delete"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/icon_avatar_delete"/>
+
+                   <LinearLayout
+                       android:id="@+id/ll_head"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/shape_black_2"
+                       android:layout_alignParentBottom="true"
+                       android:layout_margin="3dp"
+                       android:orientation="horizontal"
+                       android:padding="1dp">
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/icon_avatar_head"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="4dp"
+                           android:layout_gravity="center_vertical"
+                           android:textColor="@color/white"
+                           android:textSize="12sp"
+                           android:text="头像"/>
+
+                   </LinearLayout>
+
+               </RelativeLayout>
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="2dp"
+                   android:orientation="vertical">
+
+                   <RelativeLayout
+                       android:id="@+id/rl_avatar_add2"
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="1">
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:id="@+id/iv_avatar2"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:background="@color/color_F9FAFB"
+                           android:scaleType="centerCrop"/>
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:id="@+id/iv_avatar_add2"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:src="@drawable/icon_avatar_add"/>
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:id="@+id/iv_avatar_delete2"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentRight="true"
+                           android:src="@drawable/icon_avatar_delete"
+                           android:visibility="gone"/>
+
+                   </RelativeLayout>
+
+                   <RelativeLayout
+                       android:id="@+id/rl_avatar_add3"
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="1"
+                       android:layout_marginTop="2dp">
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:id="@+id/iv_avatar3"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:background="@color/color_F9FAFB"
+                           android:scaleType="centerCrop"/>
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:id="@+id/iv_avatar_add3"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:src="@drawable/icon_avatar_add"/>
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:id="@+id/iv_avatar_delete3"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentRight="true"
+                           android:src="@drawable/icon_avatar_delete"
+                           android:visibility="gone"/>
+
+                   </RelativeLayout>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="113dp"
+               android:layout_marginTop="2dp"
+               android:orientation="horizontal">
+
+               <RelativeLayout
+                   android:id="@+id/rl_avatar_add4"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar4"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@color/color_F9FAFB"
+                       android:scaleType="centerCrop"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_add4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/icon_avatar_add"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_delete4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/icon_avatar_delete"
+                       android:visibility="gone"/>
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rl_avatar_add5"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="2dp">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar5"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@color/color_F9FAFB"
+                       android:scaleType="centerCrop"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_add5"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/icon_avatar_add"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_delete5"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/icon_avatar_delete"
+                       android:visibility="gone"/>
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rl_avatar_add6"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="2dp">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar6"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@color/color_F9FAFB"
+                       android:scaleType="centerCrop"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_add6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/icon_avatar_add"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_delete6"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/icon_avatar_delete"
+                       android:visibility="gone"/>
+
+               </RelativeLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="113dp"
+               android:layout_marginTop="2dp"
+               android:orientation="horizontal">
+
+               <RelativeLayout
+                   android:id="@+id/rl_avatar_add7"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar7"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@color/color_F9FAFB"
+                       android:scaleType="centerCrop"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_add7"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/icon_avatar_add"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_delete7"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/icon_avatar_delete"
+                       android:visibility="gone"/>
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rl_avatar_add8"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="2dp">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar8"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@color/color_F9FAFB"
+                       android:scaleType="centerCrop"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_add8"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/icon_avatar_add"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_delete8"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/icon_avatar_delete"
+                       android:visibility="gone"/>
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rl_avatar_add9"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="2dp">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar9"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@color/color_F9FAFB"
+                       android:scaleType="centerCrop"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_add9"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/icon_avatar_add"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_avatar_delete9"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/icon_avatar_delete"
+                       android:visibility="gone"/>
+
+               </RelativeLayout>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:layout_marginBottom="40dp"
+        android:drawableBottom="@drawable/selector_login_down"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:textColor="@drawable/selector_login"
+        android:textSize="18sp"
+        android:text="下一步"/>
+
+</RelativeLayout>

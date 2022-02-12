@@ -62,7 +62,7 @@
                 android:background="@null"
                 android:textCursorDrawable="@drawable/cursor_color"
                 android:inputType="number"
-                android:textColorHint="@color/color_EEEEEE"
+                android:textColorHint="@color/color_999999"
                 android:textColor="@color/black" />
 
         </LinearLayout>

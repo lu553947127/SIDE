@@ -49,8 +49,8 @@ public class SpConfig {
     /*出生日期*/
     public static final String BIRTHDAY = "birthday";
 
-    /*工作*/
-    public static final String JOB = "job";
+    /*昵称*/
+    public static final String NAME = "name";
 
     /*期待tag*/
     public static final String FIRST_TAG = "tag";

@@ -64,8 +64,14 @@
         <!-- 设置出生日期页面 -->
         <activity android:name=".view.login.first.FirstSetBirthdayActivity" android:windowSoftInputMode="stateVisible|adjustResize"/>
 
-        <!-- 设置性别页面 -->
+        <!-- 设置头像页面 -->
         <activity android:name=".view.login.first.FirstSetAvatarActivity"/>
+
+        <!-- 设置昵称页面 -->
+        <activity android:name=".view.login.first.FirstSetNameActivity" android:windowSoftInputMode="stateVisible|adjustResize"/>
+
+        <!-- 设置邀请码页面 -->
+        <activity android:name=".view.login.first.FirstSetInvitationCodeActivity" android:windowSoftInputMode="stateVisible|adjustResize"/>
 
         <!-- h5加载页 -->
         <activity android:name=".view.common.WebViewActivity"/>

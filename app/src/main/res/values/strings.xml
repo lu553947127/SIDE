@@ -17,7 +17,7 @@
     <string name="permission_photo_storage">为了更好的为您服务，请您打开您的相机和存储权限!</string>
     <string name="permission_location">为了更好的为您服务，请您打开您的定位权限!</string>
     <string name="permission_notice">为了更好的为您服务，请您打开您的通知权限!</string>
-    <string name="photo_size_not">图片数量超过限制，最多上传6张图片哦～</string>
+    <string name="photo_size_not">图片数量超过限制，最多上传9张图片哦～</string>
     <string name="photo_size_not_4">图片数量超过限制，最多上传4张图片哦～</string>
     <string name="photo_size_not_9">图片数量超过限制，最多上传9张图片哦～</string>
     <string name="empty">暂无</string>
@@ -63,9 +63,10 @@
     <string name="first_job_student">学生</string>
     <string name="first_job_work">工作</string>
     <string name="first_job_free">自由职业者</string>
-    <string name="first_expect">遇见玩趣相投的Ta</string>
-    <string name="first_expect_tips">你的期待是？</string>
-    <string name="first_activity_tips">最希望参加什么活动？</string>
+    <string name="first_name">你的昵称叫什么</string>
+    <string name="first_name_tips">好听的昵称会加分哦</string>
+    <string name="first_code">你的邀请码是？</string>
+    <string name="first_code_tips">一起三五好友组个局</string>
     <string name="first_user">想知道你的名字和照片？</string>
     <string name="first_user_tips">有些人,一旦遇见,便一眼万年</string>
     <string name="first_user_hint">填写名字（15个字符以内）</string>

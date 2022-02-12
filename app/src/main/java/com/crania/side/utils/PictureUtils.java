@@ -71,4 +71,21 @@ public class PictureUtils {
                 .imageView(appCompatImageView)
                 .build());
     }
+
+    /**
+     * 设置图片显示（可更换占位图）
+     *
+     * @param context
+     * @param image
+     * @param appCompatImageView
+     * @param bg
+     */
+    public static void setImage(Context context, String image, AppCompatImageView appCompatImageView, int bg){
+        ImageLoader.load(context, new ImageConfig.Builder()
+                .url(image)
+                .placeholder(bg)
+                .errorPic(bg)
+                .imageView(appCompatImageView)
+                .build());
+    }
 }

@@ -11,7 +11,6 @@ import com.crania.side.utils.LoginUtils;
 import com.crania.side.utils.PermissionUtils;
 import com.crania.side.view.MainActivity;
 import com.crania.side.view.login.LoginActivity;
-import com.crania.side.view.login.first.FirstSetGenderActivity;
 import com.lxj.xpopup.XPopup;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -78,7 +77,6 @@ public class StartUpActivity extends BaseActivity {
 //                        ActivityUtils.startActivity(FirstPermissionActivity.class);
                     }
                 }else {
-//                    ActivityUtils.startActivity(FirstSetGenderActivity.class);
                     ActivityUtils.startActivity(LoginActivity.class);
                 }
 
