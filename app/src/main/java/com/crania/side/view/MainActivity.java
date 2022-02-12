@@ -17,6 +17,7 @@ import com.crania.side.utils.BadgeUtils;
 import com.crania.side.utils.NotificationsUtils;
 import com.crania.side.utils.NumberUtils;
 import com.crania.side.view.common.WebViewActivity;
+import com.crania.side.viewmodel.IMConnectViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -24,6 +25,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import io.rong.imkit.RongIM;
+import io.rong.imkit.manager.UnReadMessageManager;
+import io.rong.imlib.model.Conversation;
 
 /**
  * @ProjectName: SIDE
@@ -43,6 +47,7 @@ public class MainActivity extends BaseActivity {
     List<Fragment> mFragments;
     //用于记录上个选择的Fragment
     private int lastFragment;
+    private UnReadMessageManager.IUnReadMessageObserver observer;
 
     @Override
     public boolean isSupportSwipeBack() {
@@ -62,10 +67,12 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initDataAndEvent(Bundle savedInstanceState) {
         initFragment();
-        //设置角标
-        BadgeUtils.addBadgeAt(activity, navigation, 3, 111);
         //设置底部tab icon大小
         BadgeUtils.adjustNavigationIcoSize(activity, navigation);
+//        setMessageUnread();
+        //融云连接
+        IMConnectViewModel imConnectViewModel = getViewModel(IMConnectViewModel.class);
+        imConnectViewModel.getImToken();
     }
 
     /**
@@ -137,6 +144,31 @@ public class MainActivity extends BaseActivity {
                 showNoticePermissionDialog(getString(R.string.permission_notice));
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        RongIM.getInstance().removeUnReadMessageCountChangedObserver(observer);
+    }
+
+    /**
+     * 设置消息未读数量
+     */
+    private void setMessageUnread() {
+        observer = i -> {
+            // i 是未读数量
+            //设置底部角标显示状态
+            if (i < 1) {
+                BadgeUtils.addBadgeAt(activity, navigation, 3, 0);
+            } else if (i < 100) {
+                BadgeUtils.addBadgeAt(activity, navigation, 3, i);
+            } else {
+                BadgeUtils.addBadgeAt(activity, navigation, 3, 111);
+            }
+        };
+        RongIM.getInstance().addUnReadMessageCountChangedObserver(observer, Conversation.ConversationType.PRIVATE,
+                Conversation.ConversationType.GROUP, Conversation.ConversationType.SYSTEM);
     }
 
     /**

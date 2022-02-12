@@ -16,6 +16,7 @@ import com.parse.ParseUser;
 import java.util.List;
 
 import cn.jpush.android.api.JPushInterface;
+import io.rong.imkit.RongIM;
 
 /**
  * @ProjectName: SIDE
@@ -116,7 +117,7 @@ public class LoginUtils {
         SPUtils.getInstance().clear(true);
         ActivityUtils.startActivity(LoginActivity.class);
         ActivityUtils.finishOtherActivities(LoginActivity.class);
-//        RongIM.getInstance().logout();
+        RongIM.getInstance().logout();
     }
 
     /**

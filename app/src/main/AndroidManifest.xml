@@ -118,11 +118,28 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
-                <category android:name="com.wankrfun.crania" />
+                <category android:name="com.crania.side" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <category android:name="com.crania.side"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
             </intent-filter>
         </receiver>
         <!--极光推送 end-->
-
     </application>
 
 </manifest>
