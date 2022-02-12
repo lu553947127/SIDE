@@ -74,6 +74,7 @@ public class StartUpActivity extends BaseActivity {
                     if (PermissionUtils.isCheckPermission(activity)){
                         ActivityUtils.startActivity(MainActivity.class);
                     }else {
+                        ActivityUtils.startActivity(MainActivity.class);
 //                        ActivityUtils.startActivity(FirstPermissionActivity.class);
                     }
                 }else {
