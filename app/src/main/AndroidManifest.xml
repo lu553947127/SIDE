@@ -121,6 +121,8 @@
                 <category android:name="com.crania.side" />
             </intent-filter>
         </receiver>
+
+        <!-- 解决compileSdk31时适配报错问题 -->
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
             android:enabled="true"
@@ -130,7 +132,7 @@
                 <category android:name="com.crania.side"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" tools:ignore="BatteryLife" />
             </intent-filter>
             <!-- Optional -->
             <intent-filter>
